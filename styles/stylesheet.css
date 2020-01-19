@@ -1,0 +1,73 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-color:lightseagreen;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 80px;
+}
+
+#vs {
+    width: 150px;
+}
+
+
+.pontos {
+    height: 150px;
+    margin: auto 100px;
+    font-size: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.escolhas {
+    display: flex;
+  
+    justify-content: space-around;
+    padding: 0 70px 0 70px;
+    align-items: center;
+
+}
+
+#rock, #paper, #scissors {
+    width: 300px;
+  
+}
+
+.escolhas img {
+    transition: transform 0.4s;
+}
+
+.escolhas img:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.pedra, .tesoura {
+    display: flex;
+    flex-direction: column;
+    
+    height: 335px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.papel {
+    display: flex;
+    flex-direction: column;
+    
+    height: 235px;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+figcaption {
+    font-size: xx-large;
+}
