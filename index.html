@@ -5,19 +5,27 @@
         <meta charset="utf-8">
         <title>Pedra, papel ou tesoura</title>
     </head>
-
     <h1>
         Pedra, papel ou tesoura?
     </h1>
 
     <div class="pontos">
-        <p id="you">5</p>
+        <p id="you">You: 0</p>
         <img id="vs" src="images/vs.png" alt="vs-image">
-        <p id="pc">3</p id="pc" >
+        <p id="pcs">PC: 0</p>
 
     </div>
 
+    <!-- modal, pop-up window-->
 
+    <div id="simpleModal" class="modal">
+        <div class="modalContent">
+            <span id="closeBtn">&times;</span>
+            <img id="modalImg" src="" alt="desRock">
+            <p id="message">Mensagem</p>
+        </div>
+    </div>
+<!----------------------------------------------------->
 
    <div class="escolhas">
        <div class="pedra">
@@ -27,7 +35,7 @@
 
        <div class="papel">
         <img id="paper" src="images/paper.png" alt="paper">
-        <figcaption id="leg">Paper</figcaption>
+        <figcaption>Paper</figcaption>
        </div>
        <div class="tesoura">
         <img id="scissors" src="images/scissors.png" alt="scissors">
@@ -36,6 +44,8 @@
 
 
    </div>
+
+   <script src="index.js"></script>
 
 
 </html>

@@ -4,23 +4,27 @@ html {
     background-color:lightseagreen;
 }
 
+
+
 h1 {
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-around;
-    font-size: 80px;
+    font-size: calc(1em + 4vw);
 }
 
-#vs {
+#you, #pcs {
+    font-size: calc(1em + 4vw);
+}
+
+#vs{
     width: 150px;
 }
-
 
 .pontos {
     height: 150px;
     margin: auto 100px;
-    font-size: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,17 +32,18 @@ h1 {
 
 .escolhas {
     display: flex;
-  
     justify-content: space-around;
-    padding: 0 70px 0 70px;
+    padding: 0 70px 0 50px;
     align-items: center;
-
 }
 
-#rock, #paper, #scissors {
-    width: 300px;
-  
+#rock, #scissors {
+    width: 85%;
 }
+
+#paper {
+    width: 150%;
+} 
 
 .escolhas img {
     transition: transform 0.4s;
@@ -52,7 +57,6 @@ h1 {
 .pedra, .tesoura {
     display: flex;
     flex-direction: column;
-    
     height: 335px;
     align-items: center;
     justify-content: space-around;
@@ -61,7 +65,6 @@ h1 {
 .papel {
     display: flex;
     flex-direction: column;
-    
     height: 235px;
     align-items: center;
     justify-content: center;
@@ -70,4 +73,69 @@ h1 {
 
 figcaption {
     font-size: xx-large;
+}
+
+/* Modal/pop-up basis*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; /* para aparecer na frente de tudo*/
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto; /* para permitir rolagem, se necessario*/
+    background-color: rgba(0,0,0,0.5);   /* fundo cinzinha para cobrir a pagina principal*/
+}
+
+/* conteudo dentro do modal */
+.modalContent {
+    background-color: lightgreen;
+    position: relative;
+    margin: 5% auto;
+    padding: 20px;
+    width: 50%;
+    height: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,2),0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen; /*criando animação de transição */
+    animation-duration: 0.5s; 
+    overflow: hidden; /* para impedir as imagens de sair do container */
+}
+
+#modalImg {
+    position: absolute;
+    top: 50%; /* essa é a posição do canto superior esquerdo do bloco */
+    left: 50%;
+    transform: translate(-50%,-60%);
+    min-width: 170px;
+    max-height: 90%;
+}
+
+#closeBtn {
+    color: black;
+    float: right;
+    font-size: 30px;
+}
+
+#closeBtn:hover,.closeBtn:focus{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#message {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 20px;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    font-size: calc(0.5em + 2vw);
+    width: 600px;
+}
+
+@keyframes modalopen { /*animção de transição do modal*/
+    from{ opacity: 0}
+    to{ opacity: 1}
 }
